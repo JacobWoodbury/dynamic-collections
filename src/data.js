@@ -1,5 +1,6 @@
 const movies = [
   {
+    id: 1,
     name: "La La Land",
     genre: "Romance",
     actors: ["Ryan Gosling", "Emma Stone"],
@@ -8,6 +9,7 @@ const movies = [
     musical: true
   },
   {
+    id: 2,
     name: "Inception",
     genre: "Science Fiction",
     actors: ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
@@ -16,6 +18,7 @@ const movies = [
     musical: false
   },
   {
+    id: 3,
     name: "The Greatest Showman",
     genre: "Drama",
     actors: ["Hugh Jackman", "Zac Efron", "Zendaya"],
@@ -24,6 +27,7 @@ const movies = [
     musical: true
   },
   {
+    id: 4,
     name: "The Dark Knight",
     genre: "Action",
     actors: ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
@@ -32,6 +36,7 @@ const movies = [
     musical: false
   },
   {
+    id: 5,
     name: "Mamma Mia!",
     genre: "Comedy",
     actors: ["Meryl Streep", "Amanda Seyfried", "Pierce Brosnan"],
@@ -40,6 +45,7 @@ const movies = [
     musical: true
   },
   {
+    id: 6,
     name: "Interstellar",
     genre: "Adventure",
     actors: ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
@@ -48,6 +54,7 @@ const movies = [
     musical: false
   },
   {
+    id: 7,
     name: "Chicago",
     genre: "Crime",
     actors: ["Renée Zellweger", "Catherine Zeta-Jones", "Richard Gere"],
@@ -56,6 +63,7 @@ const movies = [
     musical: true
   },
   {
+    id: 8,
     name: "The Matrix",
     genre: "Science Fiction",
     actors: ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
@@ -64,6 +72,7 @@ const movies = [
     musical: false
   },
   {
+    id: 9,
     name: "Frozen",
     genre: "Animation",
     actors: ["Idina Menzel", "Kristen Bell", "Josh Gad"],
@@ -72,6 +81,7 @@ const movies = [
     musical: true
   },
   {
+    id: 10,
     name: "Gladiator",
     genre: "Historical Drama",
     actors: ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen"],
@@ -80,6 +90,7 @@ const movies = [
     musical: false
   },
   {
+    id: 11,
     name: "Les Misérables",
     genre: "Historical",
     actors: ["Hugh Jackman", "Russell Crowe", "Anne Hathaway"],
@@ -88,6 +99,7 @@ const movies = [
     musical: true
   },
   {
+    id: 12,
     name: "The Shawshank Redemption",
     genre: "Drama",
     actors: ["Tim Robbins", "Morgan Freeman"],
@@ -96,5 +108,6 @@ const movies = [
     musical: false
   }
 ];
+
 
 export default movies;
