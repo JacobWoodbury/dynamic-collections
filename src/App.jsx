@@ -6,18 +6,40 @@ import data from './data.js'
 
 export default function App() {
   const traverseMovies = data.map((film) =>{
+    if(!film.musical){
+      return(<>
+        
+        <Movie
+          key= {film.id}
+          name= {film.name}
+          genre= {film.genre}
+          actors = {film.actors}
+          length = {film.length}
+          releaseDate = {film.releaseDate.toDateString()}
+          musical = {film.musical}
+        />
+      </>
+      )
+    }
     
-    return(
-      <Movie
-        key= {film.id}
-        name= {film.name}
-        genre= {film.genre}
-        actors = {film.actors}
-        length = {film.length}
-        releaseDate = {film.releaseDate.toDateString()}
-        musical = {film.musical}
-      />
-    )
+  })
+
+  const traverseMusicals = data.map((film) =>{
+    if(film.musical){
+      return(<>
+        <Movie
+          key= {film.id}
+          name= {film.name}
+          genre= {film.genre}
+          actors = {film.actors}
+          length = {film.length}
+          releaseDate = {film.releaseDate.toDateString()}
+          musical = {film.musical}
+        />
+      </>
+      )
+    }
+    
   })
 
   return (
@@ -25,7 +47,10 @@ export default function App() {
       <Header/>
       
       <main className='main'>
+      <h2>Movies:</h2>
       {traverseMovies}
+      <h2>Musicals:</h2>
+      {traverseMusicals}
       </main>
       
       <Footer/>
