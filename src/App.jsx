@@ -4,8 +4,9 @@ import Footer from './components/Footer'
 import './App.css'
 import data from './data.js'
 
-function App() {
+export default function App() {
   const traverseMovies = data.map((film) =>{
+    
     return(
       <Movie
         key= {film.id}
@@ -13,7 +14,7 @@ function App() {
         genre= {film.genre}
         actors = {film.actors}
         length = {film.length}
-        releaseDate = {film.releaseDate}
+        releaseDate = {film.releaseDate.toDateString()}
         musical = {film.musical}
       />
     )
@@ -31,5 +32,3 @@ function App() {
     </>
   )
 }
-
-export default App
