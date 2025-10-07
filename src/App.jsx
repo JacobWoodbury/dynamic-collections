@@ -5,11 +5,16 @@ import './App.css'
 import data from './data.js'
 
 function App() {
-
+  const traverseData = data.map((film) =>{
+    return(
+      
+    )
+  })
 
   return (
     <>
       <Header/>
+
       <Movie
         name= {data.name}
         genre= {data.genre}
