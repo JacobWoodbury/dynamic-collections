@@ -5,24 +5,28 @@ import './App.css'
 import data from './data.js'
 
 function App() {
-  const traverseData = data.map((film) =>{
+  const traverseMovies = data.map((film) =>{
     return(
-      
+      <Movie
+        key= {film.id}
+        name= {film.name}
+        genre= {film.genre}
+        actors = {film.actors}
+        length = {film.length}
+        releaseDate = {film.releaseDate}
+        musical = {film.musical}
+      />
     )
   })
 
   return (
     <>
       <Header/>
-
-      <Movie
-        name= {data.name}
-        genre= {data.genre}
-        actors = {data.actors}
-        length = {data.length}
-        releaseDate = {data.releaseDate}
-        musical = {data.musical}
-      />
+      
+      <main className='main'>
+      {traverseMovies}
+      </main>
+      
       <Footer/>
     </>
   )
