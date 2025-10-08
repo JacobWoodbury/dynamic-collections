@@ -32,7 +32,7 @@ export default function App() {
   const traverseMusicals = data.map((film) =>{
     if(film.musical){
       return(<>
-      <section className = "musicals">
+      <section className = "card">
         <Movie 
         key= {film.id}
         name= {film.name}

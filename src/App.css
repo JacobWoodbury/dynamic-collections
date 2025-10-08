@@ -16,8 +16,13 @@
 }
 .main{
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 .card{
-  border: 2px solid blue;
+  margin: 1.5rem;
+  background-color: rgb(22, 22, 22);
+  border: 2px solid black;
+  justify-content: space-between;
+  border-radius: 4%;
+  box-shadow: 3px 2px 2px black;
 }
