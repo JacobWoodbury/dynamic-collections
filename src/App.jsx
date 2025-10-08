@@ -5,11 +5,14 @@ import './App.css'
 import data from './data.js'
 
 export default function App() {
+  data.sort((a,b)=>{
+    return new Date(b.releaseDate) - new Date(a.releaseDate)
+  })
   const traverseMovies = data.map((film) =>{
     if(!film.musical){
       return(<>
-        
-        <Movie
+        <section className='card'>
+          <Movie 
           key= {film.id}
           name= {film.name}
           genre= {film.genre}
@@ -18,6 +21,8 @@ export default function App() {
           releaseDate = {film.releaseDate.toDateString()}
           musical = {film.musical}
         />
+        </section>
+        
       </>
       )
     }
@@ -27,15 +32,18 @@ export default function App() {
   const traverseMusicals = data.map((film) =>{
     if(film.musical){
       return(<>
-        <Movie
-          key= {film.id}
-          name= {film.name}
-          genre= {film.genre}
-          actors = {film.actors}
-          length = {film.length}
-          releaseDate = {film.releaseDate.toDateString()}
-          musical = {film.musical}
+      <section className = "musicals">
+        <Movie 
+        key= {film.id}
+        name= {film.name}
+        genre= {film.genre}
+        actors = {film.actors}
+        length = {film.length}
+        releaseDate = {film.releaseDate.toDateString()}
+        musical = {film.musical}
         />
+      </section>
+        
       </>
       )
     }
@@ -47,10 +55,15 @@ export default function App() {
       <Header/>
       
       <main className='main'>
-      <h2>Movies:</h2>
-      {traverseMovies}
-      <h2>Musicals:</h2>
-      {traverseMusicals}
+      <div className='movies'>
+        <h2>Movies:</h2>
+        {traverseMovies}
+      </div>
+      <div className='musicals'>
+        <h2>Musicals:</h2>
+        {traverseMusicals}
+      </div>
+
       </main>
       
       <Footer/>
