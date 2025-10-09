@@ -35,3 +35,7 @@
   border-radius: 4%;
   box-shadow: 3px 2px 2px black;
 }
+
+.warnLength{
+  color: red;
+}
