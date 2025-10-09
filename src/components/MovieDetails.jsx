@@ -1,24 +1,14 @@
 export default function MovieDetails({length, releaseDate, musical}){
     function testLength(length) {
-        if (length) {
-            if (length > 120) {
-                const spanTag = <span className = "warnLength">(Over 2 hours!)</span>
-                return <>
-                    {length} minutes {spanTag}
-                </>
-            }
-            else {
-                return <>
-                    {length} minutes
-                </>
-            }
+        if (length > 120) {
+            const spanTag = <span className = "warnLength">(Over 2 hours!)</span>
+            return (
+                {length} + "minutes " + {spanTag}
+            )
         }
-        else {
-            return <>
-                No time given!
-            </>
+        else if (length === null) {
+            return "No length found!"
         }
-       
     }
     
     return(<>
