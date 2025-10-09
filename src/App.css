@@ -6,13 +6,22 @@
 }
 
 .musicals{
+  display: flex;
+  flex-direction: column;
   border: 2px solid green;
   flex: 1;
+  background-color: rgba(76, 74, 74, 0.679);
+  justify-content: space-evenly;
 }
 
 .movies{
+  display: flex;
+  flex-direction: column;
   border: 2px solid rgb(5, 54, 128);
-  flex:1
+  flex:1;
+  background-color: rgba(76, 74, 74, 0.679);
+  justify-content: space-evenly;
+
 }
 .main{
   display: flex;
